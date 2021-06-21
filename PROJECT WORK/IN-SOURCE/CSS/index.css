@@ -1,0 +1,618 @@
+body{
+    background-color: rgb(201, 206, 203);
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.heading{
+    margin: 0;
+    font-size: 15vh;
+}
+
+
+.logo{
+    width: 60px;
+    height: 70px;
+}
+
+
+
+/* Add a black background color to the top navigation */
+.nav1 {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+  
+/* Style the links inside the navigation bar */
+.nav1 a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    padding-top: 14px ;
+    padding-bottom: 3px;
+    margin-top: 5px;
+    margin-right: 25px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.nav1 a:not(:first-child){
+    float:right;
+}
+  
+/* Add an active class to highlight the current page */
+.active {
+    color: white;
+}
+  
+/* Hide the link that should open and close the topnav on small screens */
+.nav1 .icon {
+    display: none;
+}
+  
+/* Add a dark background on topnav links and the dropdown button on hover */
+.nav1 a:hover{
+    background-color: #555;
+    color: white;
+    border-bottom: 5px solid rgb(255, 136, 0);
+}
+
+.nav1 a:active{
+    color: rgb(255, 255, 255);
+    border-bottom: 7px solid rgb(255, 136, 0);
+}
+  
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+    .nav1 a:not(:first-child){
+      display: none;
+    }
+    .nav1 a.icon {
+      float: right;
+      display: block;
+    }
+}
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+    .nav1.responsive{
+        position: relative;
+    }
+    .nav1.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .nav1.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .nav1.responsive{
+        float: none;
+    }
+    .nav1.responsive{
+        position: relative;
+    }
+    .nav1.responsive{
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+}
+
+.main{
+    position: relative;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.7),rgba(0,0,0,0.45)),url(game.png);
+    background-size: cover;
+    background-position:center;
+    width: 100%;
+    height: 100vh;
+    /*clip-path: polygon(0% 0%,100% 0%,100% 87%,0% 100%);*/
+}
+
+.web_body{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-100%,-50%);
+    font-weight: 300;
+    font-size: 5vh;
+    color: rgb(0, 119, 255);
+}
+
+/* WAS MAKING CODE LENGTHY BECAUSE ANCHOR TAG IS USED OUTSIDE THIS CLASS ALSO
+
+.web_body a{
+    /*color: rgb(175, 238, 238);
+    padding: 8px 20px ;
+    text-decoration: none;
+}
+
+*/
+
+
+.cmn{
+    border-radius: 20px;
+    /*background-color: rgb(68, 62, 62);*/
+    transition-duration: 0.3s;
+    padding: 8px 20px ;
+    text-decoration: none;
+}
+
+.tech{
+    color: white;
+    background-color: #ff2b1d;
+}
+
+.tech:hover{
+    background-color: #940900
+}
+
+.bye{
+    border: 2px solid #bb7900;
+    color: rgb(215, 250, 236);
+}
+
+
+.bye:hover{
+    background-color: #bb7900;
+    color: white;
+}
+
+
+/* GLOBAL PART */
+
+
+.globe_section{
+    width: 98.7vw;
+    height: 90vh;
+    position:relative;
+
+    background-image: linear-gradient(to right, rgba(0, 183, 255, 0.1),rgba(9, 113, 250, 0.05));
+
+}
+
+.globe_heading{
+    margin: 0px;
+    padding: 40px;
+    background-image: linear-gradient(to right,#02b5fc,#02fc02);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+.row{
+    
+    float:left;
+}
+
+.globe_heading{
+    text-align: center;
+    font-size: 5vh;
+}
+
+.col_1_of_2{
+    float: left;
+    width: 50%;
+    margin-top: 3%;
+}
+
+.globe_sub_heading{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3vh;
+}
+
+.global_para{
+    background-color: rgba(133, 116, 116,0.05);
+    margin-left:7%;
+    margin-right: 4%;
+}
+
+.img_cntnr{
+    position:relative;
+}
+
+.glbl_img{
+    width: 30vw;
+    height: 35vh;
+    position: absolute;
+    box-shadow:0px 15px 10px rgba(0, 0, 0,0.3);
+    border-radius: 10px;
+    transition: transform 1s ;
+    outline-offset: 20px;
+}
+
+.glbl_img_1{
+    left: 1%;
+
+}
+.glbl_img_2{
+    left:38%;
+    margin-top: 10%;
+}
+
+.glbl_img_3{
+    left:5%;
+    margin-top: 20%;
+}
+
+.glbl_img:hover{
+    transform: scale(1.05) translateY(5px);
+    box-shadow: 0 25px 40px rgba(0, 0, 0,0.3);
+    z-index: 10;
+    outline: 15px solid rgba(65, 105, 225, 0);
+}
+
+.img_cntnr:hover
+.glbl_img:not(:hover){
+    transform:scale(0.95);
+    opacity:0.05;
+}
+
+
+.anchr{
+    margin-left: 10%;
+    background-color: rgb(6, 248, 127);
+    color: white;
+}
+
+@media screen and (max-width:600px){
+    .glbl_img{
+        position: relative;
+        width: 80%;
+
+    }
+    .glbl_img_2{
+        left: 0;
+    }
+
+    .glbl_img_3{
+        left: 0;
+        margin-top: 4vh;
+    }
+}
+
+
+/* FEATURES SECTION */
+
+.features_section{
+    position: relative;
+    background-image:linear-gradient(to right bottom, rgba(84, 88, 73, 0.7), rgba(61, 65, 63, 0.9)), url(nfs2.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 98.7vw;
+    height: 100vh;
+    clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%);
+}
+
+.inner_fea{
+    /*background-color: bisque;*/
+    position:absolute;
+    width: 90vw;
+    margin-top: 160px;
+    margin-left: 5%;
+}
+
+.grid_cntnr{
+    display: grid;
+    /* instead of using grid gap which is old-fashioned we used gap which is new*/
+    gap: 50px 100px;
+    grid-template-columns: auto auto auto auto;
+}
+
+.grid_item{
+    box-sizing:border-box ; 
+    /*instead of padding use border boxing beacuse 
+    it enters padding inside the box rather than the complete box 
+    for more understanding try using padding instead of border box*/
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 50vh;
+    width:93%;
+    border-radius: 5px;
+/*    padding: 20px;*/
+    text-align: center;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0,0.5);
+    transition: transform 0.5s;
+}
+
+
+.fea_icon{
+    transform: scale(2);
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: rgb(43, 88, 131);
+}
+
+
+.fea_sub_heading{
+    margin: 10px 0;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+
+.fea_para{
+    letter-spacing: 0.3px;
+    text-align: center;
+}
+
+
+.grid_item:hover{
+    
+    transform: scale(1.3) translateY(-7px);
+    box-shadow:0 20px 40px  rgba(0, 0, 0,0.8);
+}
+
+
+/* FORM SECTION*/
+
+/*.form_section{}
+*/
+
+
+
+.form_main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: sans-serif;
+    height: 100vh;
+    margin: -20px 0 50px;
+}
+
+.frm_cntnr{
+    background-color: #fa4d2a;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0,0.3);
+    position: relative;
+    overflow: hidden;
+    width: 770px;
+    max-width: 100%;
+    min-height: 480px;
+
+}
+
+.frm_heading{
+    font-size: 4vh;
+}
+
+.frm_cntnr_cmn{
+    position: absolute;
+    top:0;
+    height: 100%;
+}
+
+
+.acnt{
+    margin: 20px 0;
+}
+
+.acnt a{
+    border: 1px solid #DDDDDD;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    height: 40px;
+    width: 40px;
+}
+
+
+
+form{
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding:0 50px;
+    height: 100%;
+    text-align: center;
+}
+
+input{
+    background-color: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+}
+
+
+
+.sign_in{
+    left:0;
+    width:50%;
+    z-index: 2;
+}
+
+.sign_up{
+    left:0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+
+
+.frm_overlay_cntnr{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 20;
+}
+
+
+.overlay{
+    background-color: #ff4b33;
+    background-image: linear-gradient(to right,rgba(245, 16, 16, 0.4),rgba(151, 0, 33, 0.4));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    color:#ffffff;
+    position: relative;
+    left:-100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.overlay_cmn{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+    transition:transform 0.6s ease-in-out;
+}
+
+.overlay_left{
+    transform: translateX(-20%);
+}
+
+.overlay_right{
+    padding: 0 10px;
+    right: 0;
+    transform: translateX(0);
+}
+
+
+.frm_cntnr.right-panel-active .overlay{
+    transform:translate(50%);
+}
+
+.frm_cntnr.right-panel-active .frm_overlay_cntnr{
+    transform: translateX(-100%);
+}
+
+
+.frm_cntnr.right-panel-active .sign_in{
+    transform: translateX(100%);
+}
+
+
+.frm_cntnr.right-panel-active .sign_up{
+    transform: translateX(100%);
+    opacity:1;
+    z-index: 5;
+    animation: show 0.6s;
+}
+
+@keyframes show {
+    0%,49.99%{
+        opacity:0;
+        z-index:1;
+    }
+
+    50%,100%{
+        opacity: 1;
+        z-index: 5;  
+    }
+}
+
+
+.frm_cntnr.right-panel-active .overlay_left{
+    transform: translate(0);
+}
+
+.frm_cntnr.right-panel-active .overlay_right{
+    transform: translateX(20%);
+}
+
+
+button{
+    border-radius: 20px;
+    border: 1px solid #ff4b2b;
+    background-color: #ff4b2b;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing:1px;
+    text-transform: transform 80ms ease-in;
+}
+
+button:active{
+    transform: scale(0.95);
+}
+
+button:focus{
+    outline: none;
+}
+
+button.ghst{
+    background-color: transparent;
+    border-color: #ffffff;
+}
+
+/*unknown*/
+.bg_video_cntnt{
+    height: 100%;
+    width:100%;
+    object-fit:cover;
+}
+
+
+/*FOOTER SECTION*/
+
+footer{
+    background-color: rgb(42, 43, 41);
+    padding:50px;
+    font-size: 100%;
+}
+
+.footer_nav{
+    list-style: none;
+    float:left;
+}
+
+.social_links{
+    list-style: none;
+    float: right;
+}
+
+.footer_nav li,
+.social_links li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+
+.footer_nav li:last-child,
+.social_links li:last-child{
+    margin-right: 0;
+}
+
+
+.footer_col_1{
+    margin-top: -0.5%;
+}
+
+footer p{
+    color: #888;
+    text-align: center;
+    margin-top: 60px;
+}
+
+
+/*reverse comment*/
